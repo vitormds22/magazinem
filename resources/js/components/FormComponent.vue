@@ -1,7 +1,7 @@
 <template>
     <form>
-        <div class="justify-content-center col-md-6">
-            <p>Teste</p>
+        <div class="justify-content-center">
+            <p></p>
             <input type="text">
         </div>
     </form>

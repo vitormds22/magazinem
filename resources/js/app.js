@@ -9,3 +9,7 @@ Vue.component('form-component', require('./components/FormComponent.vue').defaul
 const app = new Vue({
     el: '#app',
 });
+
+const form = new Vue({
+    el: '#form'
+});

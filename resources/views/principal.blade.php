@@ -9,14 +9,14 @@
     </head>
     <body>
         <div id="app">
+            <header-component></header-component>
             <div class="container-fluid">
-                <header-component></header-component>
                 <div class="py-2"></div>
                 <h1>Mailling</h1>
                 <menu-component></menu-component>
+                @yield('conteudo')
             </div>
-            @yield('conteudo')
         </div>
-        <script src="{{ asset('js/app.js') }}"></script>
+        <script src="{{ asset('js/app.js') }}"></script>    
     </body>
 </html>

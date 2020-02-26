@@ -37347,8 +37347,8 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("form", [
-      _c("div", { staticClass: "justify-content-center col-md-6" }, [
-        _c("p", [_vm._v("Teste")]),
+      _c("div", { staticClass: "justify-content-center" }, [
+        _c("p"),
         _vm._v(" "),
         _c("input", { attrs: { type: "text" } })
       ])
@@ -49617,6 +49617,9 @@ Vue.component('header-component', __webpack_require__(/*! ./components/HeaderCom
 Vue.component('form-component', __webpack_require__(/*! ./components/FormComponent.vue */ "./resources/js/components/FormComponent.vue")["default"]);
 var app = new Vue({
   el: '#app'
+});
+var form = new Vue({
+  el: '#form'
 });
 
 /***/ }),
