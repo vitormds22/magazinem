@@ -12,8 +12,6 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('principal');
 });
-Route::get('/h', 'ClienteController@index');
-Route::get('/create', 'ClienteController@create');
-Route::get('/show', 'ClienteController@show');
+Route::get('/cadastro', 'ClienteController@add');

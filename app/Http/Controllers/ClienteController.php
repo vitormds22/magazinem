@@ -9,7 +9,11 @@ class ClienteController extends Controller
 {
     //Controller de dados dos clientes
     public function show(){
-        return view('/show', ['cliente' => Cliente::all()]);
+        return view('/show', ['cliente' => Cliente::find(1)]);
+    }
+
+    public function add(){
+        return view('/form');
     }
 
     public function create(){
