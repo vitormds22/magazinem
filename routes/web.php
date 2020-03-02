@@ -11,7 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('principal');
-});
-Route::get('/cadastro', 'ClienteController@add');
+Route::get('/', 'ClienteController@mailling')->name('home');
+
+Route::get('/cadastro', 'ClienteController@add')->name('adicionar');

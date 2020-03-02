@@ -13,7 +13,11 @@ class ClienteController extends Controller
     }
 
     public function add(){
-        return view('/form');
+        return view('/form', ['menu'=> "Adicionar"]);
+    }
+
+    public function mailling(){
+        return view('mailling',['menu'=>"Mailling"]);
     }
 
     public function create(){
@@ -30,6 +34,7 @@ class ClienteController extends Controller
 
         // return 'Cliente não salvo';
     }
+
     public function index(){
         return 'index';
     }

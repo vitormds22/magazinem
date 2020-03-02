@@ -1,5 +1,5 @@
 @extends('principal')
 
 @section('conteudo')
-    <form-component></form-component>
+    <mailling-component></mailling-component>
 @stop

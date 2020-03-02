@@ -12,10 +12,20 @@
             <header-component></header-component>
             <div class="container-fluid">
                 <div class="py-2"></div>
-                <h1>Mailling</h1>
-                <menu-component></menu-component>
-                @yield('conteudo')
+                <h1>{{ $menu }}</h1>
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link {{ url()->current() == route('home') ? 'active' : '' }}" href="/" title="Mailling">Mailling</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {{ url()->current() == route('adicionar') ? 'active' : '' }}" href="/cadastro" title="Cadastro">Adicionar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {{ url()->current() == '/relatorio' ? 'active' : '' }}" href="/relatorio" title="Relatórios">Relatórios</a>
+                        </li>
+                    </ul>
             </div>
+                @yield('conteudo')
         </div>
         <script src="{{ asset('js/app.js') }}"></script>    
     </body>
