@@ -7,35 +7,26 @@ use App\Cliente;
 
 class ClienteController extends Controller
 {
-    //Controller de dados dos clientes
-    public function show(){
-        return view('/show', ['cliente' => Cliente::find(1)]);
-    }
-
-    public function add(){
-        return view('/form', ['menu'=> "Adicionar"]);
-    }
-
-    public function mailling(){
-        return view('mailling',['menu'=>"Mailling"]);
-    }
-
     public function create(){
-        // $cliente = new Cliente();
-
-        // $cliente->nome = 'Luiza';
-        // $cliente->email = 'luiza@gmail.com';
-        // $cliente->telefone = '(11) 95943-0554';
-        // $cliente->data_nasc = '1994-06-10';
-
-        // if($cliente->save() === true){
-        //     return 'Cliente criado!';
-        // }
-
-        // return 'Cliente não salvo';
+        return view('clientes.create', ['menu'=> "Adicionar"]);
     }
 
     public function index(){
-        return 'index';
+        $clientes = Cliente::orderBy('id')->get();
+
+        return view('clientes.index',['clientes' => $clientes],['menu'=>"Mailling"]);
+    }
+
+    public function store(){
+        $cliente = new Cliente();
+
+        $cliente->nome = request('nome');
+        $cliente->email = request('email');
+        $cliente->telefone = request('telefone');
+        $cliente->data_nasc = request('data_nasc');
+
+        $cliente->save();
+
+        return redirect('/')->with('msg', 'Cliente cadastrado');
     }
 }

@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', 'ClienteController@mailling')->name('home');
+Route::get('/', 'ClienteController@index')->name('clientes.index');
 
-Route::get('/cadastro', 'ClienteController@add')->name('adicionar');
+Route::get('/create', 'ClienteController@create')->name('clientes.create');
+
+Route::post('/store', 'ClienteController@store')->name('clientes.store');
