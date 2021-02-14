@@ -7,13 +7,18 @@
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
         <title>Magazine Meire</title>
+        <style>
+            .navbar {
+                color: #777070;
+            }
+        </style>
     </head>
     <body>
         <div id="app">
             <header-component></header-component>
             <div class="container-fluid">
                 <div class="py-2"></div>
-                <h1>{{ $menu }}</h1>
+                {{-- <h1>{{ $menu }}</h1> --}}
                     <ul class="nav nav-tabs">
                         <li class="nav-item">
                             <a class="nav-link {{ url()->current() == route('clientes.index') ? 'active' : '' }}" href="/" title="Mailling">Mailling</a>
