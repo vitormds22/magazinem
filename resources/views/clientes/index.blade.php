@@ -14,6 +14,7 @@
                 <th scope="col">E-mail</th>
                 <th scope="col">Telefone</th>
                 <th scope="col">Data de nascimento</th>
+                <th scope="col">Ações</th>
             </tr>
         </thead>
         <tbody>
@@ -23,7 +24,12 @@
                     <td>{{$cliente->nome}}</td>
                     <td>{{$cliente->email}}</td>
                     <td>{{$cliente->telefone}}</td>
-                    <td>{{$cliente->data_nasc}}</td>
+                    <td>{{date_format($cliente->data_nasc, 'd/m/Y')}}</td>
+                    <td>
+                        <button>visual</button>
+                        <button>editar</button>
+                        <button>excluir</button>
+                    </td>
                 </tr>
             @endforeach
         </tbody>
