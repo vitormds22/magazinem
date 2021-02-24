@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="pt-BR">
     <head>
         <meta charset="utf-8">
         <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -33,6 +33,6 @@
             </div>
                 @yield('conteudo')
         </div>
-        <script src="{{ asset('js/app.js') }}"></script>    
+        <script src="{{ asset('js/app.js') }}"></script> 
     </body>
 </html>

@@ -1948,7 +1948,29 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
+  props: ['clientes'],
   data: function data() {
     return {};
   }
@@ -37385,9 +37407,63 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div")
+  return _c("table", { staticClass: "table table-striped" }, [
+    _vm._m(0),
+    _vm._v(" "),
+    _c(
+      "tbody",
+      _vm._l(_vm.clientes, function(cliente, index) {
+        return _c(
+          "tr",
+          { key: index },
+          [
+            _vm._l(cliente, function(ind, i) {
+              return _c("td", { key: i }, [_vm._v(_vm._s(cliente[i]))])
+            }),
+            _vm._v(" "),
+            _vm._m(1, true)
+          ],
+          2
+        )
+      }),
+      0
+    )
+  ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", { staticClass: "thead-dark" }, [
+      _c("tr", [
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Código")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Nome")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("E-mail")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Telefone")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Data de nascimento")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Ações")])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("td", [
+      _c("button", [_vm._v("visual")]),
+      _vm._v(" "),
+      _c("button", [_vm._v("editar")]),
+      _vm._v(" "),
+      _c("button", [_vm._v("excluir")])
+    ])
+  }
+]
 render._withStripped = true
 
 
@@ -49563,7 +49639,7 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 Vue.component('header-component', __webpack_require__(/*! ./components/HeaderComponent.vue */ "./resources/js/components/HeaderComponent.vue")["default"]);
 Vue.component('form-component', __webpack_require__(/*! ./components/FormComponent.vue */ "./resources/js/components/FormComponent.vue")["default"]);
-Vue.component('mailling-component', __webpack_require__(/*! ./components/MaillingComponent.vue */ "./resources/js/components/MaillingComponent.vue")["default"]);
+Vue.component('mailling', __webpack_require__(/*! ./components/MaillingComponent.vue */ "./resources/js/components/MaillingComponent.vue")["default"]);
 var app = new Vue({
   el: '#app'
 });
@@ -49840,8 +49916,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/vagrant/Sites/magazinem/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /home/vagrant/Sites/magazinem/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /home/machado/Documents/Sites/magazinem/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /home/machado/Documents/Sites/magazinem/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

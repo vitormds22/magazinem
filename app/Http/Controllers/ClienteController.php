@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Clientes;
+use App\Cliente;
 
 class ClienteController extends Controller
 {
@@ -12,13 +12,13 @@ class ClienteController extends Controller
     }
 
     public function index(){
-        $clientes = Clientes::orderBy('id')->get();
+        $clientes = json_encode(Cliente::select('id', 'nome', 'email', 'telefone', 'data_nasc')->get());
 
-        return view('clientes.index',['clientes' => $clientes],['menu'=>"Mailling"]);
+        return view('clientes.index',['menu'=>"Mailling"], compact('clientes'));
     }
 
     public function store(){
-        $cliente = new Clientes();
+        $cliente = new Cliente();
 
         $cliente->nome = request('nome');
         $cliente->email = request('email');
