@@ -7,10 +7,7 @@
         {{session('msg')}}
     </div>    
     <div>
-        <mailling 
-            v-bind:clientes="{{$clientes}}"
-        >
-        </mailling>
+        <mailling v-bind:clientes="{{$clientes}}"></mailling>
     </div>
 </div>
 @stop

@@ -12,11 +12,12 @@
     </thead>
     <tbody>
         <tr v-for="(cliente, index) in clientes" :key="index">
-            <td v-for="(ind, i) in cliente" :key="i">{{cliente[i]}}</td>
-            <td>
-                <button>visual</button>
-                <button>editar</button>
-                <button>excluir</button>
+            <td id="clientes" v-for="(ind, i) in cliente" :key="i">{{cliente[i]}}</td>
+            <td id="acoes">
+                <button class="btn btn-success">visual</button>
+                <button class="btn btn-success">modal</button>
+                <button class="btn btn-warning">editar</button>
+                <button class="btn btn-danger">excluir</button>
             </td>
         </tr>
     </tbody>
@@ -35,5 +36,14 @@ export default {
 </script>
 
 <style scoped>
-
+    th{
+        text-align: center;
+    }
+    .btn{
+        margin-right: 20px;
+        padding: 10px;
+    }
+    #clientes{
+        vertical-align: middle;
+    }
 </style>
